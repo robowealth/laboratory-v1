@@ -1,4 +1,6 @@
 rootProject.name = 'LaboratoryV1'
+include ':react-native-camera'
+project(':react-native-camera').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera/android')
 include ':react-native-vector-icons'
 project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
 include ':react-native-svg'
@@ -10,7 +12,7 @@ project(':react-native-sentry').projectDir = new File(rootProject.projectDir, '.
 include ':react-native-pdf'
 project(':react-native-pdf').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-pdf/android')
 include ':react-native-navigation'
-project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/android/app')
+project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/lib/android/app/')
 include ':react-native-localization'
 project(':react-native-localization').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-localization/android')
 include ':react-native-image-resizer'
@@ -25,8 +27,6 @@ include ':react-native-fetch-blob'
 project(':react-native-fetch-blob').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fetch-blob/android')
 include ':react-native-device-info'
 project(':react-native-device-info').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-device-info/android')
-include ':react-native-camera'
-project(':react-native-camera').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera/android')
 include ':react-native-appupdate'
 project(':react-native-appupdate').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-appupdate/android')
 include ':react-native-appsflyer'
@@ -41,7 +41,5 @@ include ':appcenter'
 project(':appcenter').projectDir = new File(rootProject.projectDir, '../node_modules/appcenter/android')
 include ':@ptomasroos_react-native-idfa'
 project(':@ptomasroos_react-native-idfa').projectDir = new File(rootProject.projectDir, '../node_modules/@ptomasroos/react-native-idfa/android')
-include ':react-native-gesture-handler'
-project(':react-native-gesture-handler').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-gesture-handler/android')
 
 include ':app'
