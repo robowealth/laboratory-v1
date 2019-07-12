@@ -107,6 +107,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        missingDimensionStrategy 'react-native-camera', 'general'
     }
     splits {
         abi {
@@ -138,6 +139,27 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-vector-icons')
+    implementation project(':react-native-svg')
+    implementation project(':react-native-signature-capture')
+    implementation project(':react-native-sentry')
+    implementation project(':react-native-pdf')
+    implementation project(':react-native-navigation')
+    implementation project(':react-native-localization')
+    implementation project(':react-native-image-resizer')
+    implementation project(':react-native-image-marker')
+    implementation project(':react-native-image-base64')
+    implementation project(':react-native-fs')
+    implementation project(':react-native-fetch-blob')
+    implementation project(':react-native-device-info')
+    implementation project(':react-native-camera')
+    implementation project(':react-native-appupdate')
+    implementation project(':react-native-appsflyer')
+    implementation project(':react-native-appsee')
+    implementation project(':appcenter-crashes')
+    implementation project(':appcenter-analytics')
+    implementation project(':appcenter')
+    implementation project(':@ptomasroos_react-native-idfa')
     implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
@@ -150,3 +172,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+apply plugin: 'com.google.gms.google-services'
